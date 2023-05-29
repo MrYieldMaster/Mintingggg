@@ -1,0 +1,271 @@
+/*-- font-family included --*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+$interFont: 'Inter', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $interFont;
+    background-color: #212529;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+a {
+    color: #057ED6;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+code {
+    background-color: #f7f7f9;
+    padding: 5px 10px;
+    color: #ff0000;
+    border-radius: 3px;
+}
+
+.video-item {
+    max-width: 100%;
+    max-height: auto;
+    width: 720px;
+    height: 480px;
+}
+
+.ss-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.support-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        background-color: #f7f7f9;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.sidebar-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(27, 34, 38, 0.8);
+}
+
+.main-wrapper {
+    max-width: 80%;
+    margin-left: 20%;
+}
+
+.main-container {
+    margin: 0 4%;
+}
+
+
+.sidebar-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li a {
+        text-transform: capitalize;
+        display: block;
+        padding: 10px 30px;
+        color: rgba(255, 255, 255, 0.7);
+        transition: 0.3s;
+        text-decoration: none;
+
+        &.active,
+        &:hover {
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+        }
+    }
+}
+
+.section-title {
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.steps-list {
+    margin-left: 20px;
+    list-style: square;
+}
+
+.footer-section {
+    border-top: 1px solid #DDDDDD;
+    padding-top: 20px;
+}
+
+/*-- commont style start --*/
+.text-center {
+    text-align: center;
+}
+
+.bb {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.view-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.code-view {
+    padding: 20px 0;
+    white-space: pre-wrap;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/*-- commont style end --*/
+
+/*-- utilities style start --*/
+/*-- font-weight style start --*/
+$fontWeights: (
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+);
+
+@each $i in $fontWeights {
+    .fw-#{$i} {
+        font-weight: #{$i};
+    }
+}
+
+/*-- font-weight style end --*/
+
+/*-- padding top bottom style start --*/
+$ptbSizes: (
+    10,
+    20,
+    50,
+    60,
+    100
+);
+
+@each $i in $ptbSizes {
+    .ptb-#{$i} {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+    }
+}
+
+/*-- padding top bottom style end --*/
+
+/*-- padding top style start --*/
+$ptSizes: (
+    20,
+    30,
+    40,
+    50,
+);
+
+@each $i in $ptSizes {
+    .pt-#{$i} {
+        padding-top: #{$i}px;
+    }
+}
+
+/*-- padding top style end --*/
+
+/*-- padding bottom style start --*/
+$pbSizes: (
+    20,
+    30,
+    40,
+    50,
+);
+
+@each $i in $pbSizes {
+    .pb-#{$i} {
+        padding-bottom: #{$i}px;
+    }
+}
+
+/*-- padding botton style end --*/
+
+/*-- margin top style start --*/
+$mtSizes: (
+    20,
+    30,
+    40,
+    50,
+    80,
+);
+
+@each $i in $mtSizes {
+    .mt-#{$i} {
+        margin-top: #{$i}px;
+    }
+}
+
+/*-- margin top style end --*/
+
+/*-- margin bottom style start --*/
+$mbSizes: (
+    20,
+    30,
+    40,
+    50,
+    80,
+);
+
+@each $i in $mbSizes {
+    .mb-#{$i} {
+        margin-bottom: #{$i}px;
+    }
+}
+
+/*-- margin bottom style end --*/
+/*-- utilities style end --*/
